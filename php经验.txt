@@ -1,0 +1,102 @@
+不显示错误信息 修改 display_errors 为 off 不显示修改为 on 
+
+流程
+
+find / -name php* 全盘搜索 php.ini 搜索到位置 以后  修改熟悉即可
+
+
+
+php mysql 无法连接的问题  原因 ：
+
+自动安装的 php 没有 mysql的模块 需要 yum 再次安装下就好了 
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+[root@guhaotechnology ~]# yum search php-mysql
+Loaded plugins: fastestmirror, security
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfast.net
+ * extras: mirror.steadfast.net
+ * updates: mirror.steadfast.net
+base                                                               | 3.7 kB     00:00     
+extras                                                             | 3.4 kB     00:00     
+updates                                                            | 3.4 kB     00:00     
+================================= N/S Matched: php-mysql =================================
+php-mysql.x86_64 : A module for PHP applications that use MySQL databases
+
+  Name and summary matches only, use "search all" for everything.
+[root@guhaotechnology ~]# yum install php-mysql.x86_64
+Loaded plugins: fastestmirror, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfast.net
+ * extras: mirror.steadfast.net
+ * updates: mirror.steadfast.net
+Resolving Dependencies
+--> Running transaction check
+---> Package php-mysql.x86_64 0:5.3.3-47.el6 will be installed
+--> Processing Dependency: php-pdo(x86-64) for package: php-mysql-5.3.3-47.el6.x86_64
+--> Running transaction check
+---> Package php-pdo.x86_64 0:5.3.3-47.el6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================
+ Package               Arch               Version                  Repository        Size
+==========================================================================================
+Installing:
+ php-mysql             x86_64             5.3.3-47.el6             base              86 k
+Installing for dependencies:
+ php-pdo               x86_64             5.3.3-47.el6             base              80 k
+
+Transaction Summary
+==========================================================================================
+Install       2 Package(s)
+
+Total download size: 166 k
+Installed size: 384 k
+Is this ok [y/N]: y
+Downloading Packages:
+(1/2): php-mysql-5.3.3-47.el6.x86_64.rpm                           |  86 kB     00:00     
+(2/2): php-pdo-5.3.3-47.el6.x86_64.rpm                             |  80 kB     00:00     
+------------------------------------------------------------------------------------------
+Total                                                     306 kB/s | 166 kB     00:00     
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : php-pdo-5.3.3-47.el6.x86_64                                            1/2 
+  Installing : php-mysql-5.3.3-47.el6.x86_64                                          2/2 
+  Verifying  : php-mysql-5.3.3-47.el6.x86_64                                          1/2 
+  Verifying  : php-pdo-5.3.3-47.el6.x86_64                                            2/2 
+
+Installed:
+  php-mysql.x86_64 0:5.3.3-47.el6                                                         
+
+Dependency Installed:
+  php-pdo.x86_64 0:5.3.3-47.el6                                                           
+
+Complete!
+[root@guhaotechnology ~]# yum install php-mysql
+Loaded plugins: fastestmirror, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfast.net
+ * extras: mirror.steadfast.net
+ * updates: mirror.steadfast.net
+Package php-mysql-5.3.3-47.el6.x86_64 already installed and latest version
+Nothing to do
+[root@guhaotechnology ~]# apache
+-bash: apache: command not found
+[root@guhaotechnology ~]# apachectl restart
+[root@guhaotechnology ~]# mysqld restart
+-bash: mysqld: command not found
+[root@guhaotechnology ~]# service mysqld restart
+Stopping mysqld:                                           [  OK  ]
+Starting mysqld:                                           [  OK  ]
+[root@guhaotechnology ~]# apachectl restart
+
+--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+ 
