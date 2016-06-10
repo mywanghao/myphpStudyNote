@@ -1,0 +1,76 @@
+#cnblogs_post_body
+ {
+        color: black;
+        font: 0.875em/1.5em "微软雅黑" , "PTSans" , "Arial" ,sans-serif;
+        font-size: 16px;
+  }
+  #cnblogs_post_body h1
+    {
+        background: #535453;
+        border-radius: 6px 6px 6px 6px;
+        box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+        color: #FFFFFF;
+        font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
+        font-size: 17px;
+        font-weight: bold;
+        height: 25px;
+        line-height: 25px;
+        margin: 15px 0 !important;
+        padding: 5px 0 5px 20px;
+        text-shadow: 2px 2px 3px #222222;
+    }
+ #cnblogs_post_body h2
+    {
+        background: #828282;
+        border-radius: 6px 6px 6px 6px;
+        box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+        color: #FFFFFF;
+        font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
+        font-size: 15px;
+        font-weight: 100px;
+        height: 22px;
+        line-height: 22px;
+        margin: 15px 0 !important;
+        padding: 5px 0 5px 20px;
+        text-shadow: 2px 2px 3px #222222;
+    }
+
+@media screen and (min-width: 1px) and (max-width: 800px)
+    {
+        #mytopmenu
+        {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        #centercontent
+        {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+        #leftcontent
+        {
+            width: 100%;
+            position: static;
+            width: 100%;
+        }
+        #footer
+        {
+            margin: 0;
+            width: 100%;
+        }
+        #comment_form
+        {
+            display: none;
+        }
+        #header
+        {
+            display: none;
+        }
+        #green_channel
+        {
+            display: none;
+        }
+        #centercontent img { width: 98% !important; }
+    }

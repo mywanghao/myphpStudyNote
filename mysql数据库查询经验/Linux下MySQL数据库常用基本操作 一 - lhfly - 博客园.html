@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://www.cnblogs.com/xdpxyxy/archive/2012/11/16/2773662.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/bundle-BlackLowKey.css">
+<link type="text/css" rel="stylesheet" href="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/95797.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/xdpxyxy/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/xdpxyxy/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/xdpxyxy/wlwmanifest.xml">
+<script type="text/javascript" src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/encoder.js"></script><script src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'xdpxyxy', cb_enable_mathjax=false;</script>
+<script src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/blog-common.js" type="text/javascript"></script>
+<style type="text/css"></style><meta name="viewport" content="initialwidth=device-width,initial-scale=1"></head>
+<body style="position: static;">
+<a name="top"></a>
+<div id="page_begin_html"></div><script>load_page_begin_html();</script>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/xdpxyxy/"><img id="blogLogo" src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/xdpxyxy/">老A</a></h1>
+<h2>达到目标之前 请先确定目标</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/xdpxyxy/">首页</a></li>
+<li><a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://msg.cnblogs.com/send/lhfly">联系</a></li>
+<li><a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/xdpxyxy/rss">订阅</a>
+<!--<a id="MyLinks1_XMLLink" class="aHeaderXML" href="http://www.cnblogs.com/xdpxyxy/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			
+<span id="stats_post_count">随笔 - 45&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 28</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园.html">Linux下MySQL数据库常用基本操作 一</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><h1 style="text-align: left;">1、显示数据库</h1>
+<div class="cnblogs_code">
+<pre> show databases;</pre>
+</div>
+<h1>2、选择数据库</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">use</span> 数据库名;</pre>
+</div>
+<h1>3、显示数据库中的表</h1>
+<div class="cnblogs_code">
+<pre>show tables;</pre>
+</div>
+<h1>4、显示数据表的结构&nbsp;</h1>
+<div class="cnblogs_code">
+<pre>describe 表名;</pre>
+</div>
+<h1>&nbsp;5、显示表中记录&nbsp;</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">SELECT</span> <span style="color: #808080;">*</span> <span style="color: #0000ff;">FROM</span> 表名</pre>
+</div>
+<h1>&nbsp;6、建库</h1>
+<div class="cnblogs_code">
+<pre> <span style="color: #0000ff;">create</span> databse 库名;</pre>
+</div>
+<h1>&nbsp;7、建表</h1>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">create</span> <span style="color: #0000ff;">table</span><span style="color: #000000;"> 表名 (字段设定列表)；
+
+mysql</span><span style="color: #808080;">&gt;</span> <span style="color: #0000ff;">create</span> <span style="color: #0000ff;">table</span><span style="color: #000000;"> name(
+    </span><span style="color: #808080;">-&gt;</span> id <span style="color: #0000ff;">int</span> auto_increment <span style="color: #808080;">not</span> <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">primary</span> <span style="color: #0000ff;">key</span><span style="color: #000000;"> ,
+    </span><span style="color: #808080;">-&gt;</span> uname <span style="color: #0000ff;">char</span>(<span style="color: #800000; font-weight: bold;">8</span><span style="color: #000000;">),
+    </span><span style="color: #808080;">-&gt;</span> gender <span style="color: #0000ff;">char</span>(<span style="color: #800000; font-weight: bold;">2</span><span style="color: #000000;">),
+    </span><span style="color: #808080;">-&gt;</span><span style="color: #000000;"> birthday date );
+Query OK, </span><span style="color: #800000; font-weight: bold;">0</span> rows affected (<span style="color: #800000; font-weight: bold;">0.03</span><span style="color: #000000;"> sec)
+
+mysql</span><span style="color: #808080;">&gt;</span><span style="color: #000000;"> show tables;
+</span><span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">----------------+</span>
+<span style="color: #808080;">|</span> Tables_in_userdb <span style="color: #808080;">|</span>
+<span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">----------------+</span>
+<span style="color: #808080;">|</span> name             <span style="color: #808080;">|</span>
+<span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">----------------+</span>
+<span style="color: #800000; font-weight: bold;">1</span> row <span style="color: #808080;">in</span> <span style="color: #0000ff;">set</span> (<span style="color: #800000; font-weight: bold;">0.00</span><span style="color: #000000;"> sec)
+
+mysql</span><span style="color: #808080;">&gt;</span><span style="color: #000000;"> describe name;
+</span><span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">--------+---------+------+-----+---------+----------------+</span>
+<span style="color: #808080;">|</span> Field    <span style="color: #808080;">|</span> Type    <span style="color: #808080;">|</span> <span style="color: #0000ff;">Null</span> <span style="color: #808080;">|</span> <span style="color: #0000ff;">Key</span> <span style="color: #808080;">|</span> <span style="color: #0000ff;">Default</span> <span style="color: #808080;">|</span> Extra          <span style="color: #808080;">|</span>
+<span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">--------+---------+------+-----+---------+----------------+</span>
+<span style="color: #808080;">|</span> id       <span style="color: #808080;">|</span> <span style="color: #0000ff;">int</span>(<span style="color: #800000; font-weight: bold;">11</span>) <span style="color: #808080;">|</span> NO   <span style="color: #808080;">|</span> PRI <span style="color: #808080;">|</span> <span style="color: #0000ff;">NULL</span>    <span style="color: #808080;">|</span> auto_increment <span style="color: #808080;">|</span>
+<span style="color: #808080;">|</span> uname    <span style="color: #808080;">|</span> <span style="color: #0000ff;">char</span>(<span style="color: #800000; font-weight: bold;">8</span>) <span style="color: #808080;">|</span> YES  <span style="color: #808080;">|</span>     <span style="color: #808080;">|</span> <span style="color: #0000ff;">NULL</span>    <span style="color: #808080;">|</span>                <span style="color: #808080;">|</span>
+<span style="color: #808080;">|</span> gender   <span style="color: #808080;">|</span> <span style="color: #0000ff;">char</span>(<span style="color: #800000; font-weight: bold;">2</span>) <span style="color: #808080;">|</span> YES  <span style="color: #808080;">|</span>     <span style="color: #808080;">|</span> <span style="color: #0000ff;">NULL</span>    <span style="color: #808080;">|</span>                <span style="color: #808080;">|</span>
+<span style="color: #808080;">|</span> birthday <span style="color: #808080;">|</span> date    <span style="color: #808080;">|</span> YES  <span style="color: #808080;">|</span>     <span style="color: #808080;">|</span> <span style="color: #0000ff;">NULL</span>    <span style="color: #808080;">|</span>                <span style="color: #808080;">|</span>
+<span style="color: #808080;">+</span><span style="color: #008080;">--</span><span style="color: #008080;">--------+---------+------+-----+---------+----------------+</span>
+<span style="color: #800000; font-weight: bold;">4</span> rows <span style="color: #808080;">in</span> <span style="color: #0000ff;">set</span> (<span style="color: #800000; font-weight: bold;">0.00</span><span style="color: #000000;"> sec)
+
+注： auto_increment 自增
+     </span><span style="color: #0000ff;">primary</span> <span style="color: #0000ff;">key</span>    主键</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<h1>&nbsp;8、增加记录</h1>
+<div class="cnblogs_code">
+<pre> <span style="color: #0000ff;">insert</span> <span style="color: #0000ff;">into</span> name(uname,gender,birthday) <span style="color: #0000ff;">values</span>(<span style="color: #ff0000;">'</span><span style="color: #ff0000;">张三</span><span style="color: #ff0000;">'</span>,<span style="color: #ff0000;">'</span><span style="color: #ff0000;">男</span><span style="color: #ff0000;">'</span>,<span style="color: #ff0000;">'</span><span style="color: #ff0000;">1971-10-01</span><span style="color: #ff0000;">'</span>);</pre>
+</div>
+<h1>&nbsp;9、修改记录</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">update</span> name <span style="color: #0000ff;">set</span> birthday<span style="color: #808080;">=</span><span style="color: #ff0000;">'</span><span style="color: #ff0000;">1971-01-10</span><span style="color: #ff0000;">'</span> <span style="color: #0000ff;">where</span> uname<span style="color: #808080;">=</span><span style="color: #ff0000;">'</span><span style="color: #ff0000;">张三</span><span style="color: #ff0000;">'</span>;</pre>
+</div>
+<h1>&nbsp;10、删除记录</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">delete</span> <span style="color: #0000ff;">from</span> name <span style="color: #0000ff;">where</span> uname<span style="color: #808080;">=</span><span style="color: #ff0000;">'</span><span style="color: #ff0000;">张三</span><span style="color: #ff0000;">'</span>;</pre>
+</div>
+<h1>&nbsp;11、删除表</h1>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">drop</span> <span style="color: #0000ff;">table</span> 表名</pre>
+</div>
+<h1>&nbsp;12、删除库</h1>
+<div class="cnblogs_code">
+<pre> <span style="color: #0000ff;">drop</span> <span style="color: #0000ff;">database</span> 库名;</pre>
+</div>
+<h1>13、备份数据库&nbsp;</h1>
+<div class="cnblogs_code">
+<pre>mysqldump <span style="color: #808080;">-</span>u root <span style="color: #808080;">-</span>p <span style="color: #008080;">--</span><span style="color: #008080;">opt 数据库名&gt;备份名; //进入到库目录</span></pre>
+</div>
+<h1>14、恢复</h1>
+<div class="cnblogs_code">
+<pre>mysql <span style="color: #808080;">-</span>u root <span style="color: #808080;">-</span>p 数据库名<span style="color: #808080;">&lt;</span>备份名; <span style="color: #808080;">//</span>恢复时数据库必须存在，可以为空数据库</pre>
+</div>
+<h1>&nbsp;15、数据库授权</h1>
+<p>&nbsp;　格式：grant select on 数据库.* to 用户名@登录主机 identified by "密码"</p>
+<p>例1、增加一个用户user001密码为123456，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用以root用户连入MySQL，然后键入以下命令：</p>
+<div class="cnblogs_code">
+<pre> mysql<span style="color: #808080;">&gt;</span> <span style="color: #0000ff;">grant</span> <span style="color: #0000ff;">select</span>,<span style="color: #0000ff;">insert</span>,<span style="color: #0000ff;">update</span>,<span style="color: #0000ff;">delete</span> <span style="color: #0000ff;">on</span> <span style="color: #808080;">*</span>.<span style="color: #808080;">*</span> <span style="color: #0000ff;">to</span> user001@"<span style="color: #808080;">%</span>" Identified <span style="color: #0000ff;">by</span> "<span style="color: #800000; font-weight: bold;">123456</span>";</pre>
+</div>
+<p>&nbsp;</p>
+<p>例2、增加一个用户user002密码为123456,让此用户只可以在localhost上登录,也可以设置指定IP，并可以对数据库test进行查询、插入、修改、删除的操作 (localhost指本地主机，即MySQL数据库所在的那台主机）</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //这样用户即使用知道user_2的密码，他也无法从网上直接访问数据库，只能通过MYSQL主机来操作test库。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //首先用以root用户连入MySQL，然后键入以下命令：</p>
+<div class="cnblogs_code">
+<pre>  mysql<span style="color: #808080;">&gt;</span><span style="color: #0000ff;">grant</span> <span style="color: #0000ff;">select</span>,<span style="color: #0000ff;">insert</span>,<span style="color: #0000ff;">update</span>,<span style="color: #0000ff;">delete</span> <span style="color: #0000ff;">on</span> test.<span style="color: #808080;">*</span> <span style="color: #0000ff;">to</span> user002<span style="color: #008000;">@localhost</span> identified <span style="color: #0000ff;">by</span> "<span style="color: #800000; font-weight: bold;">123456</span>";</pre>
+</div>
+<p>&nbsp;</p>
+<p>注： 其次也可以采用修改表的方式，处理用户的登录方式：</p>
+<p>数据库： Mysql<br>表:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User<br>修改：&nbsp;&nbsp; User表中的Host列的值来现实登录入口<br>具休操作请参照：<a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/15/2771565.html" target="_blank">Centos 6.2 安装Mysql笔记</a></p>
+<p><br>&nbsp;<br>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/xdpxyxy/category/429209.html">Linux</a>, <a href="http://www.cnblogs.com/xdpxyxy/category/429603.html">MySQL</a>, <a href="http://www.cnblogs.com/xdpxyxy/category/365504.html">数据库</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2773662,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://msg.cnblogs.com/send/lhfly" target="_blank">联系我</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/icon_weibo_24.png" alt=""></a>
+<a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/xdpxyxy/" target="_blank"><img src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/sample_face.gif" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/xdpxyxy/">lhfly</a><br>
+<a href="http://home.cnblogs.com/u/xdpxyxy/followees">关注 - 37</a><br>
+<a href="http://home.cnblogs.com/u/xdpxyxy/followers">粉丝 - 27</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+    <a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+    <div class="diggit" onclick="votePost(2773662,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+	<div class="buryit" onclick="votePost(2773662,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/15/2771565.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/15/2771565.html" title="发布于2012-11-15 15:20">Centos 6.2 安装Mysql</a><br><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/17/2774855.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/17/2774855.html" title="发布于2012-11-17 14:38">Windows8应用开发2 保存读取本地应用程序设置</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2012-11-16 17:32</span> <a href="http://www.cnblogs.com/xdpxyxy/">lhfly</a> 阅读(<span id="post_view_count">34530</span>) 评论(<span id="post_comment_count">0</span>)  <a href="http://i.cnblogs.com/EditPosts.aspx?postid=2773662" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/16/2773662.html#" onclick="AddToWz(2773662);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=95797,cb_entryId=2773662,cb_blogApp=currentBlogApp,cb_blogUserGuid='2c4bcb58-bf13-e011-ac81-842b2b196315',cb_entryCreatedDate='2012/11/16 17:32:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/16/2773662.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/16/2773662.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://www.rongcloud.cn/" target="_blank">【推荐】融云即时通讯云－豆果美食、Faceu等亿级APP都在用</a><br><a href="http://www.gcpowertools.com.cn/products/activereports/excel.htm?utm_source=cnblogs&utm_medium=blogpage&utm_term=bottom&utm_content=AR&utm_campaign=community" target="_blank">【推荐】报表开发别头大！类Excel 复杂报表开发实例，即学即用</a><br><a href="http://group.cnblogs.com/topic/74539.html" target="_blank">【推荐】阿里云万网域名：.xin .com将推出重磅优惠</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="https://www.wilddog.com/?utm_source=cnblog&utm_medium=banner&utm_content=contenct_bottom&utm_campaign=suzhoucodingcamp" target="_blank"><img width="300" height="250" src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/cnblogs-300x250-x2-1.jpg" alt=""></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/547066/" target="_blank">基础架构联盟：自由软件最佳实践</a><br> ·  <a href="http://news.cnblogs.com/n/547065/" target="_blank">雷克萨斯导航系统因OTA软件更新变砖</a><br> ·  <a href="http://news.cnblogs.com/n/547064/" target="_blank">机器人已经开始在一些大公司取代工人</a><br> ·  <a href="http://news.cnblogs.com/n/547063/" target="_blank">Uber提供的快递服务正式开启 以后不仅拉人还能送货</a><br> ·  <a href="http://news.cnblogs.com/n/547062/" target="_blank">科学家或在2017年获得黑洞的第一张图像</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="https://www.jpush.cn/?from=cnblogs01" target="_blank"><img width="468" height="60" src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/24442-20160601173803367-927530472.jpg" alt=""></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/536334/" target="_blank">高效编程之道：好好休息</a><br> ·  <a href="http://kb.cnblogs.com/page/545476/" target="_blank">快速学习者的高效学习策略</a><br> ·  <a href="http://kb.cnblogs.com/page/545784/" target="_blank">一个前端的自我修养</a><br> ·  <a href="http://kb.cnblogs.com/page/543110/" target="_blank">架构漫谈（九）：理清技术、业务和架构的关系</a><br> ·  <a href="http://kb.cnblogs.com/page/542725/" target="_blank">架构漫谈（八）：从架构的角度看如何写好代码</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+$(function () {
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);    
+});
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><a href="http://www.cnzz.com/stat/website.php?web_id=5306128" target="_blank">站长统计</a>
+<div align="left"><a href="http://www.amazingcounters.com/"><img border="0" src="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/counter.php" alt="hit analyzer"></a></div><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/xdpxyxy/">lhfly</a><br>园龄：<a href="http://home.cnblogs.com/u/xdpxyxy/" title="入园时间：2010-12-30">5年5个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/xdpxyxy/followers/">27</a><br>关注：<a href="http://home.cnblogs.com/u/xdpxyxy/followees/">37</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;2c4bcb58-bf13-e011-ac81-842b2b196315&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2012/10/01&#39;);return false;">&lt;</a></td><td align="center">2012年11月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2012/12/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td class="CalWeekendDay" align="center">3</td></tr><tr><td class="CalWeekendDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/08.html"><u>8</u></a></td><td align="center">9</td><td class="CalWeekendDay" align="center">10</td></tr><tr><td class="CalWeekendDay" align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/15.html"><u>15</u></a></td><td align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/16.html"><u>16</u></a></td><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/17.html"><u>17</u></a></td></tr><tr><td class="CalWeekendDay" align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/22.html"><u>22</u></a></td><td align="center">23</td><td class="CalWeekendDay" align="center">24</td></tr><tr><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/25.html"><u>25</u></a></td><td align="center"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/26.html"><u>26</u></a></td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td class="CalOtherMonthDay" align="center">1</td></tr><tr><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/xdpxyxy/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="http://www.cnblogs.com/xdpxyxy/archive/2012/11/16/2773662.html#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_recentposts" class="sidebar-block">
+<div class="catListEssay">
+<h3 class="catListTitle">最新随笔</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/xdpxyxy/p/4170101.html">1. LVS负载均衡DR模式部署</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/p/3213492.html">2. SQL更改表架构</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/p/3199726.html">3. BCP导入导出MsSql</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3133256.html">4. C#打造51CTO自动签到服务领取无忧币之开篇</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3132868.html">5. C#使用技巧之调用JS脚本方法二</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/11/3132097.html">6. C#使用技巧之调用JS脚本方法一</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/10/3131294.html">7. Windows8开发实战之-文本布局</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/10/3130710.html">8. WP7中HttpWebRequest的使用方法之POST方式</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/10/3130698.html">9. WP7中HttpWebRequest的使用方法之GET方式</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/10/3130682.html">10. WP7中HttpWebRequest异常</a></li>
+</ul>
+</div>
+</div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/xdpxyxy/tag/WinForm/">WinForm</a>(4)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/SQL%E5%B8%B8%E7%94%A8%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/">SQL常用日期函数</a>(3)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/Windows%20Phone%207/">Windows Phone 7</a>(3)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/Windows8%E5%BC%80%E5%8F%91/">Windows8开发</a>(3)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/sqlserver/">sqlserver</a>(2)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/ASP.Net/">ASP.Net</a>(1)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/LVS%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">LVS负载均衡</a>(1)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/%E7%BE%A4%E9%9B%86%E7%90%86%E8%AE%BA/">群集理论</a>(1)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>(1)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>(1)</li><li><a href="http://www.cnblogs.com/xdpxyxy/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/xdpxyxy/category/365502.html">.Net(18)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/xdpxyxy/category/488477.html">HTML(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/xdpxyxy/category/432419.html">JS(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/xdpxyxy/category/429209.html">Linux(6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/xdpxyxy/category/429603.html">MySQL(5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/xdpxyxy/category/488474.html">Windows Phone  7(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/xdpxyxy/category/426914.html">Windows8(5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/xdpxyxy/category/368142.html">领域驱动(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/xdpxyxy/category/365505.html">其它</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/xdpxyxy/category/365504.html">数据库(12)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/xdpxyxy/archive/2014/12.html">2014年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/xdpxyxy/archive/2013/07.html">2013年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/xdpxyxy/archive/2013/06.html">2013年6月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/xdpxyxy/archive/2013/05.html">2013年5月 (12)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/xdpxyxy/archive/2013/04.html">2013年4月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/xdpxyxy/archive/2012/12.html">2012年12月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/xdpxyxy/archive/2012/11.html">2012年11月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/xdpxyxy/archive/2012/04.html">2012年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/xdpxyxy/archive/2012/03.html">2012年3月 (1)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_scorerank" class="sidebar-block">
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	56064
+	</li>
+	<li class="liRank">
+		排名 -	4061
+	</li>
+</ul>
+</div>
+
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/04/28/2475221.html#3423789">1. Re:级联下拉列表绑定 地区JS文件</a></li>
+        <li class="recent_comment_body">initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '13', '1303', '130......</li>
+        <li class="recent_comment_author">--Keith_</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/11/3132097.html#3384094">2. Re:C#使用技巧之调用JS脚本方法一</a></li>
+        <li class="recent_comment_body">“System.Runtime.InteropServices.COMException”类型的未经处理的异常在 mscorlib.dll 中发生 其他信息: 检索 COM 类工厂中 CLSID 为 ......</li>
+        <li class="recent_comment_author">--inscan</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3133256.html#3378729">3. Re:C#打造51CTO自动签到服务领取无忧币之开篇</a></li>
+        <li class="recent_comment_body">非常期待【整合Windows服务、打包及安装】教程的发布，方便的话发一份源码：room90176@126.com</li>
+        <li class="recent_comment_author">--room901</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/05/08/3067236.html#3310758">4. Re:C#操作剪贴板实现复制粘贴</a></li>
+        <li class="recent_comment_body">为何在调试过程中复制的信息，在调试关闭后，才去第一次粘贴，发现粘贴信息不存在？</li>
+        <li class="recent_comment_author">--海浪波涛1</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3132868.html#3261631">5. Re:C#使用技巧之调用JS脚本方法二</a></li>
+        <li class="recent_comment_body">第三个,from1的代码似乎是有问题的<br>方法虽然定义了方法名和参数<br>但方法名形同虚设了,下方的test写死了,应该写方法的参数才对</li>
+        <li class="recent_comment_author">--无名牛宝宝</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="./Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园_files/Linux下MySQL数据库常用基本操作 一 - lhfly - 博客园.html">1. Linux下MySQL数据库常用基本操作 一(34530)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/11/3132097.html">2. C#使用技巧之调用JS脚本方法一(13856)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3132868.html">3. C#使用技巧之调用JS脚本方法二(11363)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/05/05/3061317.html">4. C# 中文在URL中的编码(8634)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/04/28/SqlServer.html">5. SQL Server中更新视图, 可能出现的错误及处理(5509)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3133256.html">1. C#打造51CTO自动签到服务领取无忧币之开篇(5)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3132868.html">2. C#使用技巧之调用JS脚本方法二(4)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2012/12/15/2819530.html">3. MVC控制器中获取本地IP(4)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/11/3132097.html">4. C#使用技巧之调用JS脚本方法一(3)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/05/08/3067236.html">5. C#操作剪贴板实现复制粘贴(3)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/11/3132097.html">1. C#使用技巧之调用JS脚本方法一(5)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/05/08/3067236.html">2. C#操作剪贴板实现复制粘贴(3)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/12/3132868.html">3. C#使用技巧之调用JS脚本方法二(3)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/05/05/3061317.html">4. C# 中文在URL中的编码(1)</a></li><li><a href="http://www.cnblogs.com/xdpxyxy/archive/2013/06/10/3130710.html">5. WP7中HttpWebRequest的使用方法之POST方式(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2016 lhfly
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<div class="_bd_ext_tip _bd_ext_search_mode" style="visibility: hidden; left: 461px; top: 307px;"><span class="_bd_ext_search">百度一下</span><span class="_bd_ext_open">打开链接</span><span class="_bd_ext_copy">复制</span></div><div id="yddWrapper" draggable="true" style="left: 543px; top: 333px;"></div><template id="yodaoDictPanel"></template></body></html>
